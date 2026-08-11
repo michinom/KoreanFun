@@ -143,7 +143,7 @@
 
     <section id="practicePage" class="hidden">
       <h1>오늘의 연습</h1>
-      <p>문법 2개 + 어휘 2개</p>
+      <p>문법 1개 + 어휘 2개</p>
 
       <div class="list">
         <div class="card">
@@ -166,32 +166,32 @@
   <script>
     const grammarList = [
       { k: "이/가 아니다", en: "is not / are not (negation of nouns)" },
-      { k: "-는", en: "Present tense modifier (describes a noun: “that does…”)" },
+      { k: "-는", en: "Present tense modifier (describes a noun: that does…)" },
       { k: "(이)나", en: "Noun or noun" },
-      { k: "-는 것", en: "Turning a verb into a noun (“doing ~”)" },
+      { k: "-는 것", en: "Turning a verb into a noun (doing ~)" },
       { k: "-(으)니까", en: "because" },
-      { k: "-에게", en: "“to” (recipient: person/animal)" },
-      { k: "-고 있다", en: "“to be doing ~” (ongoing action)" },
-      { k: "-기가 싫다/힘들다/쉽다/어렵다", en: "“doing ~ is disliked / hard / easy / difficult”" },
-      { k: "-동안", en: "“during / for (a period of time)”" },
-      { k: "-기로 하다", en: "“to decide to ~”" },
-      { k: "-말고", en: "“not A but B / except”" },
-      { k: "-는(으)ㄴ 것 같다", en: "“it seems / I think”" },
-      { k: "-((으)ㄹ 수 있다/없다", en: "“can / cannot / be able to”" },
-      { k: "-((으)ㄴ", en: "Past tense modifier (“that was ~ed”)" },
-      { k: "-((으)면 안 되다", en: "“must not / not allowed to”" },
-      { k: "-아도/어도 되다", en: "“may / it’s okay to”" },
-      { k: "-마다", en: "“every” (each time/unit)" },
-      { k: "-기 전에", en: "“before doing ~”" },
-      { k: "-((으)ㄹ 거예요", en: "“will / going to” (future)" },
-      { k: "-아/어 있다", en: "Result state (“is left / is in a state”)" },
-      { k: "-아지다/어지다", en: "“to become / get”" },
+      { k: "-에게", en: "to (recipient: person/animal)" },
+      { k: "-고 있다", en: "to be doing ~ (ongoing action)" },
+      { k: "-기가 싫다/힘들다/쉽다/어렵다", en: "doing ~ is disliked / hard / easy / difficult" },
+      { k: "-동안", en: "during / for (a period of time)" },
+      { k: "-기로 하다", en: "to decide to ~" },
+      { k: "-말고", en: "not A but B / except" },
+      { k: "-는(으)ㄴ 것 같다", en: "it seems / I think" },
+      { k: "-(으)ㄹ 수 있다/없다", en: "can / cannot / be able to" },
+      { k: "-(으)ㄴ", en: "Past tense modifier (that was ~ed)" },
+      { k: "-(으)면 안 되다", en: "must not / not allowed to" },
+      { k: "-아도/어도 되다", en: "may / it’s okay to" },
+      { k: "-마다", en: "every (each time/unit)" },
+      { k: "-기 전에", en: "before doing ~" },
+      { k: "-(으)ㄹ 거예요", en: "to guess about sth" },
+      { k: "-아/어 있다", en: "Result state (is left / is in a state)" },
+      { k: "-아지다/어지다", en: "to become / get" },
       { k: "-네요", en: "Expressing surprise or realization" },
-      { k: "-아/어 줄래요", en: "“can you do ~ for me?”" },
+      { k: "-아/어 줄래요", en: "can you do ~ for me?" },
       { k: "-는데/(으)ㄴ 데", en: "Background info contrast soft explanation" },
-      { k: "-았으면 었으면 좋겠다", en: "“I wish / I hope”" },
-      { k: "-거나", en: "“or” (choice between actions)" },
-      { k: "-기 때문에", en: "“because” (clear cause)" },
+      { k: "-았으면 었으면 좋겠다", en: "I wish / I hope" },
+      { k: "-거나", en: "or (choice between actions)" },
+      { k: "-기 때문에", en: "because (clear cause)" },
       { k: "-겠-", en: "Intention promise or strong guess" }
     ];
     const vocabList = [
@@ -758,7 +758,7 @@
     }
 
     document.getElementById("startBtn").addEventListener("click", () => {
-      const grammar = pickRandom(grammarList, 2);
+      const grammar = pickRandom(grammarList, 1);
       const vocab = pickRandom(vocabList, 2);
 
       document.getElementById("grammarItems").innerHTML = grammar.map(renderItem).join("<br>");
@@ -769,7 +769,7 @@
     });
 
     function reshuffle() {
-      const grammar = pickRandom(grammarList, 2);
+      const grammar = pickRandom(grammarList, 1);
       const vocab = pickRandom(vocabList, 2);
       document.getElementById("grammarItems").innerHTML = grammar.map(renderItem).join("<br>");
       document.getElementById("vocabItems").innerHTML = vocab.map(renderItem).join("<br>");
